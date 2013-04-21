@@ -183,9 +183,13 @@ color: rgba(255,180,0,1);
 
 {Block:IfAlignNavigationWithDescription}
 nav ul {
-float:right;
+float:center;
 margin-top:10px;
-text-align:right;
+text-align:center;
+width: 500px;
+margin-right: auto;
+margin-left: auto;
+-webkit-padding-start: 0px;
 }
 nav ul li {
 list-style:none;
@@ -693,11 +697,6 @@ display:none;
 }
 {/block:ifHideSocialButton}
 
-{Block:IfSmallerNavForPages}
-.socialbutton{
-top:-121px;
-}
-
 nav ul li a.ask{
 display:inline;
 }
@@ -709,8 +708,7 @@ margin-bottom:40px;
 }
 
 nav ul li {
-margin-left:8px;
-float:left;
+float:center;
 display:inline;
 }
 nav ul li a {
