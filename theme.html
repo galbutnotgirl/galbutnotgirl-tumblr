@@ -92,7 +92,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d2135', end
 background-size:100%;
 height:100%;
 text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
-padding-bottom:220px;
+padding-bottom:100px;
 background-attachment:fixed;
 }
 
@@ -250,7 +250,7 @@ box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
 }
 .postcontainer {
 float:left;
-margin:20px 0 20px 0px;
+margin:0px 0 20px 0px;
 }
 
 .post a{
@@ -516,7 +516,7 @@ clear:both;
 ol.notes {
 margin-left:0;
 padding-left:0;
-margin-bottom:100px;
+margin-bottom:0px;
 }
 ol.notes,
 ol.notes li {
@@ -585,9 +585,8 @@ background-image: url("http://static.tumblr.com/nlywmlg/259m9rluw/glyphicons-hal
 background-position: -48px 0;
 }
 .icon-heart {
-background-position: -96px 0;
+background-position: -96px -2px;
 margin-right:2px;
-
 }
 .icon-home {
 background-position: 0 -24px;
@@ -870,34 +869,34 @@ margin-top:-50px;
 
 <div id="socialbar"><ul>
 {block:ifTwitter}
-<li><a href="http://www.twitter.com/{text:Twitter}"><span class="socico twitter"></span></a></li>
+<li><a href="http://www.twitter.com/{text:Twitter}" target="_blank"><span class="socico twitter"></span></a></li>
 {/block:ifTwitter}
 {block:ifFacebook}
-<li><a href="http://www.facebook.com/{text:Facebook}"><span class="socico facebook"></span></a></li>
+<li><a href="http://www.facebook.com/{text:Facebook}" target="_blank"><span class="socico facebook"></span></a></li>
 {/block:ifFacebook}
 {block:ifDribbble}
-<li><a href="http://www.dribbble.com/{text:Dribbble}"><span class="socico dribbble"></span></a></li>
+<li><a href="http://www.dribbble.com/{text:Dribbble}" target="_blank"><span class="socico dribbble"></span></a></li>
 {/block:ifDribbble}
 {block:ifFlickr}
-<li><a href="http://www.flickr.com/photos/{text:Flickr}"><span class="socico flickr"></span></a></li>
+<li><a href="http://www.flickr.com/photos/{text:Flickr}" target="_blank"><span class="socico flickr"></span></a></li>
 {/block:ifFlickr}
 {block:ifYouTube}
-<li><a href="http://www.youtube.com/{text:Youtube}"><span class="socico youtube"></span></a></li>
+<li><a href="http://www.youtube.com/{text:Youtube}" target="_blank"><span class="socico youtube"></span></a></li>
 {/block:ifYouTube}
 {block:ifSkype}
 <li><a href="skype:{text:Skype}?userinfo"><span class="socico skype"></span></a></li>
 {/block:ifSkype}
 {block:ifDeviantArt}
-<li><a href="http://{text:Deviantart}.deviantart.com"><span class="socico deviantart"></span></a></li>
+<li><a href="http://{text:Deviantart}.deviantart.com" target="_blank"><span class="socico deviantart"></span></a></li>
 {/block:ifDeviantArt}
 {block:ifVimeo}
-<li><a href="http://www.vimeo.com/{text:Vimeo}"><span class="socico vimeo"></span></a></li>
+<li><a href="http://www.vimeo.com/{text:Vimeo}" target="_blank"><span class="socico vimeo"></span></a></li>
 {/block:ifVimeo}
 {block:ifBehance}
-<li><a href="http://www.behance.net/{text:Behance}"><span class="socico behance"></span></a></li>
+<li><a href="http://www.behance.net/{text:Behance}" target="_blank"><span class="socico behance"></span></a></li>
 {/block:ifBehance}
 {block:ifGithub}
-<li><a href="http://github.com/{text:Github}"><span class="socico github"></span></a></li>
+<li><a href="http://github.com/{text:Github}" target="_blank"><span class="socico github"></span></a></li>
 {/block:ifGithub}
 <ul></div>
 
@@ -909,7 +908,7 @@ margin-top:-50px;
 <ul>
 <li><a class="show_hide" href="#">Social</a></li>
 <li><a href="http://www.google.com/recaptcha/mailhide/d?k=01YoW-v1VPK1zREyo-U3dNhQ==&amp;c=WsvROMutRClriBruMwlRuAKI_RkRs4t5gb_ixuaJD28=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501YoW-v1VPK1zREyo-U3dNhQ\75\75\46c\75WsvROMutRClriBruMwlRuAKI_RkRs4t5gb_ixuaJD28\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">Contact</a></li>
-<li><a href="http://files.galbutnotgirl.com/GalOppenheimerResume.pdf">Resume</a></li>
+<li><a href="http://files.galbutnotgirl.com/GalOppenheimerResume.pdf" target="_blank>Resume"</a></li>
 <li><a href="{RSS}">RSS</a></li>
 <li><a href="/archive">Archive</a></li>
 {block:AskEnabled}
@@ -1024,7 +1023,11 @@ margin-top:-50px;
 <a href='{TagURL}'>{Tag}</a>
 {/block:Tags}
 {/block:HasTags}
-{block:NoteCount}<li class="notes"><i class="icon-heart icon-white"> <a href="{Permalink}#notes"> </i>{NoteCount}</a></li>{/block:NoteCount}
+{block:PermalinkPage}
+<a name="notes"> <a/>
+{/block:PermalinkPage}
+
+{block:NoteCount}<li class="notes"><a href="{Permalink}#notes"><i class="icon-heart icon-white"> </i>{NoteCount}</a></li>{/block:NoteCount}
 {block:IfDisqusAccount}
 {block:IfNotInfiniteScroll}
 <div class="comments"><i class="icon-comment icon-white"></i><a class="dsq-comment-count" href="{Permalink}#disqus_thread"></a></div>
