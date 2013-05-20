@@ -923,9 +923,9 @@ margin-top:-50px;
 <ul>
 <li><a class="show_hide" href="#">Social</a></li>
 <li><a href="http://www.google.com/recaptcha/mailhide/d?k=01YoW-v1VPK1zREyo-U3dNhQ==&amp;c=WsvROMutRClriBruMwlRuAKI_RkRs4t5gb_ixuaJD28=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501YoW-v1VPK1zREyo-U3dNhQ\75\75\46c\75WsvROMutRClriBruMwlRuAKI_RkRs4t5gb_ixuaJD28\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">Contact</a></li>
-<li><a href="http://files.galbutnotgirl.com/GalOppenheimerResume.pdf" target="_blank>Resume"</a></li>
-<li><a href="{RSS}">RSS</a></li>
-<li><a href="/archive">Archive</a></li>
+<li><a href="http://files.galbutnotgirl.com/GalOppenheimerResume.pdf" target="_blank">Resume</a></li>
+<li><a href="{RSS}" target="_blank">RSS</a></li>
+<!-- Removing<li><a href="/archive">Archive</a></li> -->
 {block:AskEnabled}
 <li><a class="ask" href="/ask">Ask</a></li>
 {/block:AskEnabled}
@@ -952,16 +952,16 @@ margin-top:-50px;
 {block:Posts}
 <div class='postcontainer'>
 <div class='post'>
-{block:Text}
-{block:Title}
-<h3>{Title}</h3>
-{/block:Title}
-{/block:Text}
 <div class='date'>
 <a href='{Permalink}'>
 {ShortMonth} {DayOfMonth} &middot; <span>  {Year}</span>
 </a>
 </div> <!--date-->
+{block:Text}
+{block:Title}
+<h3>{Title}</h3>
+{/block:Title}
+{/block:Text}
 {Body}
 {block:Answer}      
 <div class="questioncontainer">
